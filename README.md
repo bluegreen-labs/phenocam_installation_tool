@@ -151,19 +151,19 @@ or
 
 with:
 
-Parameter     | Description
-------------- | ------------------------------ 
-IP	      | ip address of the camera 
-USER	      | user name (admin - if not set) 
-PASSWORD      | user password (on a new Stardot NetCam this is admin) 
-CAMERA        | the name of the camera / site
-TIME_OFFSET   | difference in hours from UTC of the timezone in which the camera resides (always use + or - signs to denote differences from UTC)
-TZ            | a text string corresponding to the local time zone (e.g. EST)
-CRON_START    | first hour of the scheduled image acquisitions (e.g. 4 in the morning)
-CRON_END      | last hour of the scheduled image acquisitions (e.g. ten at night, so 22 in 24-h notation)
-CRON_INT      | interval at which to take pictures (e.g. 15, every 15 minutes - default phenocam setting is 30)
-FTP_MODE      | active or passive (default = passive)
-[all parameters are required!]
+| Parameter     | Description |
+| ------------- | ------------------------------ |
+| IP            | ip address of the camera |
+| USER          | user name (admin - if not set) |
+| PASSWORD      | user password (on a new Stardot NetCam this is admin) |
+| CAMERA        | the name of the camera / site |
+| TIME_OFFSET   | difference in hours from UTC of the timezone in which the camera resides (always use + or - signs to denote differences from UTC) |
+| TZ            | a text string corresponding to the local time zone (e.g. EST) |
+| CRON_START    | first hour of the scheduled image acquisitions (e.g. 4 in the morning) |
+| CRON_END      | last hour of the scheduled image acquisitions (e.g. ten at night, so 22 in 24-h notation) |
+| CRON_INT      | interval at which to take pictures (e.g. 15, every 15 minutes - default phenocam setting is 30) |
+| FTP_MODE      | active or passive (default = passive) |
+| [all parameters are required!] | |
 
 An example of our in lab test camera configuration:
 
