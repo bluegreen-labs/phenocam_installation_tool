@@ -71,7 +71,7 @@ brew install telnet
 clone the project to your home computer using the following command (with git installed)
 
 ```bash
-git clone https://github.com/khufkens/phenocam-installation-tool.git
+git clone https://github.com/bluegreen-labs/phenocam-installation-tool.git
 ```
 
 alternatively, download the project using download button.
@@ -83,12 +83,12 @@ Unzip the downloaded files or use the files cloned by git as is.
 clone the project to your home computer using the following command (with git installed)
 
 ```bash
-git clone https://github.com/khufkens/phenocam-installation-tool.git -b icos
+git clone https://github.com/bluegreen-labs/phenocam-installation-tool.git -b icos
 ```
 
 Alternatively, download the project using download button when on the ICOS branch page:
 
-[https://github.com/khufkens/phenocam-installation-tool/tree/icos](https://github.com/khufkens/phenocam-installation-tool/tree/icos).
+[https://github.com/bluegreen-labs/phenocam-installation-tool/tree/icos](https://github.com/bluegreen-labs/phenocam-installation-tool/tree/icos).
 
 Unzip the downloaded files or use the files cloned by git as is.
 
@@ -98,7 +98,7 @@ When using a third party network you can change the SERVER, USER, and PASSWD par
 
 ```bash
 # clone the archive
-git clone https://github.com/khufkens/phenocam-installation-tool.git
+git clone https://github.com/bluegreen-labs/phenocam-installation-tool.git
 
 # enter the files subdir
 cd phenocam-installation-tool/files/
