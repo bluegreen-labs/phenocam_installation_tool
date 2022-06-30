@@ -413,12 +413,12 @@ BeginProg
 '-----------------------------------------------------------------------------------------
 
         'Set port connection for outgoing to PPP for Phenocam network
-        IPRoute ("klima.sr.unh.edu",1)
+        IPRoute ("klima.nau.edu",1)
 
         'FTP file to Phenocam network
 
         For j = 1 To 4
-          FTPResult = FTPClient ("klima.sr.unh.edu","anonymous","anonymous",USRFiles(j),PhenoDest(j),2)
+          FTPResult = FTPClient ("phenocam.nau.edu","anonymous","anonymous",USRFiles(j),PhenoDest(j),2)
         Next j
 
         'Remove files from USR drive if sucessful

@@ -3,7 +3,7 @@
 #--------------------------------------------------------------------
 # This script installs all necessary configuration
 # files as required to upload images to the PhenoCam server
-# (phenocam.sr.unh.edu) on your NetCam SC/XL camera
+# (phenocam.nau.edu) on your NetCam SC/XL camera
 #
 # NOTES: this program can be used stand alone or called remotely
 # as is done in the PIT.sh script. The script
@@ -115,7 +115,7 @@ fi
 
 # upload / download server - location from which to grab and
 # and where to put config files
-HOST='phenocam.sr.unh.edu'
+HOST='phenocam.nau.edu'
 USER='anonymous'
 PASSWD='anonymous'
 

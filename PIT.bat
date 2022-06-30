@@ -1,7 +1,7 @@
 ::--------------------------------------------------------------------
 :: This script installs all necessary configuration
 :: files as required to upload images to the PhenoCam server
-:: (phenocam.sr.unh.edu) on your NetCam SC/XL camera REMOTELY with
+:: (phenocam.nau.edu) on your NetCam SC/XL camera REMOTELY with
 :: minimum interaction with the camera
 ::
 :: last updated and maintained by:
@@ -35,7 +35,7 @@ echo OBJECT.SendKeys "%passwd%{ENTER}" >> sendCommands.vbs
 echo WScript.sleep 500 >> sendCommands.vbs
 echo OBJECT.SendKeys "cd /etc/config{ENTER}" >> sendCommands.vbs
 echo WScript.sleep 500 >> sendCommands.vbs
-echo OBJECT.SendKeys "wget http://phenocam.sr.unh.edu/data/configs/phenocam_default_install.tar.gz{ENTER}" >> sendCommands.vbs
+echo OBJECT.SendKeys "wget http://phenocam.nau.edu/data/configs/phenocam_default_install.tar.gz{ENTER}" >> sendCommands.vbs
 echo WScript.sleep 1000 >> sendCommands.vbs
 echo OBJECT.SendKeys "gunzip phenocam_default_install.tar.gz{ENTER}" >> sendCommands.vbs
 echo WScript.sleep 500 >> sendCommands.vbs
