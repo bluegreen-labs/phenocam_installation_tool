@@ -3,5 +3,5 @@ open SERVER
 user anonymous anonymous
 FTPMODE
 ascii
-put mycamera_ip.html data/mycamera/mycamera_ip.html
+put mycamera_ip.html data/mycamera/mycamera_ip.html.zip
 quit
