@@ -115,7 +115,7 @@ fi
 
 # upload / download server - location from which to grab and
 # and where to put config files
-HOST='phenocam.icos-etc.eu'
+HOST='ftp://icos01.uantwerpen.be/ICOS_sites/BE-Bra/Stardot/Upload_TO_Data_Portal'
 USER='anonymous'
 PASSWD='anonymous'
 
