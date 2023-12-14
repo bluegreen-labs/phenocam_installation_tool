@@ -28,13 +28,13 @@ echo "$3"
 sleep 1
 echo "cd /etc/config"
 sleep 1
-echo "wget http://icos-etc.eu/configs/phenocam_default_install.tar.gz"
+echo "wget http://gaia.agraria.unitus.it/phenocam_icos_install.tar.gz"
 sleep 1
-echo "gunzip phenocam_default_install.tar.gz"
+echo "gunzip phenocam_icos_install.tar.gz"
 sleep 1
-echo "tar -xvf phenocam_default_install.tar"
+echo "tar -xvf phenocam_icos_install.tar"
 sleep 1
-echo "rm phenocam_default_install.tar"
+echo "rm phenocam_icos_install.tar"
 sleep 1
 echo "sh phenocam_install.sh $4 $5 $6 $7 $8 $9 ${10}"
 sleep 180 ) | telnet 2> /dev/null

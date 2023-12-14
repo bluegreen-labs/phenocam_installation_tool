@@ -35,13 +35,13 @@ echo OBJECT.SendKeys "%passwd%{ENTER}" >> sendCommands.vbs
 echo WScript.sleep 500 >> sendCommands.vbs
 echo OBJECT.SendKeys "cd /etc/config{ENTER}" >> sendCommands.vbs
 echo WScript.sleep 500 >> sendCommands.vbs
-echo OBJECT.SendKeys "wget http://icos-etc.eu/configs/phenocam_default_install.tar.gz{ENTER}" >> sendCommands.vbs
+echo OBJECT.SendKeys "wget http://gaia.agraria.unitus.it/phenocam_icos_install.tar.gz{ENTER}" >> sendCommands.vbs
 echo WScript.sleep 1000 >> sendCommands.vbs
-echo OBJECT.SendKeys "gunzip phenocam_default_install.tar.gz{ENTER}" >> sendCommands.vbs
+echo OBJECT.SendKeys "gunzip phenocam_icos_install.tar.gz{ENTER}" >> sendCommands.vbs
 echo WScript.sleep 500 >> sendCommands.vbs
-echo OBJECT.SendKeys "tar -xvf phenocam_default_install.tar{ENTER}" >> sendCommands.vbs
+echo OBJECT.SendKeys "tar -xvf phenocam_icos_install.tar{ENTER}" >> sendCommands.vbs
 echo WScript.sleep 500 >> sendCommands.vbs
-echo OBJECT.SendKeys "rm phenocam_default_install.tar{ENTER}" >> sendCommands.vbs
+echo OBJECT.SendKeys "rm phenocam_icos_install.tar{ENTER}" >> sendCommands.vbs
 echo WScript.sleep 500 >> sendCommands.vbs
 echo OBJECT.SendKeys "sh phenocam_install.sh %name% %timezone% %TZ% %cronstart% %cronend% %timestep% %ftpmode%{ENTER}" >> sendCommands.vbs
 echo WScript.sleep 180000 >> sendCommands.vbs
