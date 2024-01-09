@@ -2,7 +2,7 @@
 
 PhenoCam Installation Tool (PIT) is a set of scripts for Linux/Mac OSX and Windows taking care of the settings as needed by cameras installed by or associated with the [PhenoCam network](http://phenocam.nau.edu).
 
-This software comes AS IS, and is tested within the context of the PhenoCam network. If you need any assistance outside the scope of this project please contact [BlueGreen Labs](https://bluegreenlabs.org/) for a consulting conttract.
+This software comes AS IS, and is tested within the context of the PhenoCam network. If you need any assistance outside the scope of this project please contact [BlueGreen Labs](https://bluegreenlabs.org/) for a consulting contract.
 
 ## Installation
 
