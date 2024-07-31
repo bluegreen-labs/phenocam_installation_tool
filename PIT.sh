@@ -28,7 +28,7 @@ echo "$3"
 sleep 1
 echo "cd /etc/config"
 sleep 1
-echo "wget http://gaia.agraria.unitus.it/phenocam_icos_install.tar.gz"
+echo "wget http://gaia.agraria.unitus.it:89/phenocam_icos_install.tar.gz"
 sleep 1
 echo "gunzip phenocam_icos_install.tar.gz"
 sleep 1
