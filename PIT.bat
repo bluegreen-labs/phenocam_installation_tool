@@ -35,7 +35,7 @@ echo OBJECT.SendKeys "%passwd%{ENTER}" >> sendCommands.vbs
 echo WScript.sleep 500 >> sendCommands.vbs
 echo OBJECT.SendKeys "cd /etc/config{ENTER}" >> sendCommands.vbs
 echo WScript.sleep 500 >> sendCommands.vbs
-echo OBJECT.SendKeys "wget http://gaia.agraria.unitus.it/phenocam_icos_install.tar.gz{ENTER}" >> sendCommands.vbs
+echo OBJECT.SendKeys "wget http://gaia.agraria.unitus.it:89/phenocam_icos_install.tar.gz{ENTER}" >> sendCommands.vbs
 echo WScript.sleep 1000 >> sendCommands.vbs
 echo OBJECT.SendKeys "gunzip phenocam_icos_install.tar.gz{ENTER}" >> sendCommands.vbs
 echo WScript.sleep 500 >> sendCommands.vbs
