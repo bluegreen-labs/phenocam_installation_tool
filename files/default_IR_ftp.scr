@@ -3,7 +3,7 @@ open SERVER
 user anonymous anonymous
 FTPMODE
 ascii
-put /etc/config/metadata.txt data/mycamera/mycamera_IR_DATETIMESTRING.meta.zip
+put /etc/config/metadata.txt data/mycamera/mycamera_IR_DATETIMESTRING.meta
 binary
-put /dev/video/jpeg0 data/mycamera/mycamera_IR_DATETIMESTRING.jpg.zip
+put /dev/video/jpeg0 data/mycamera/mycamera_IR_DATETIMESTRING.jpg
 quit

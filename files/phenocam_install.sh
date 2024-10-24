@@ -10,7 +10,7 @@
 # will pull all installation files from a server and adjust the
 # settings on the NetCam accordingly.
 #
-# Koen Hufkens (May 2016) koen.hufkens@gmail.com
+# (c) BlueGreen Labs (2024)
 #--------------------------------------------------------------------
 
 # -------------- BASIC ERROR TRAPS-----------------------------------
