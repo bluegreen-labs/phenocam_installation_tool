@@ -70,7 +70,7 @@ brew install telnet
 
 ### PhenoCam network
 
-clone the project to your home computer using the following command (with git installed)
+For all the cameras associated with the PhenoCam US network, clone the project to your home computer using the following command (with git installed)
 
 ```bash
 git clone https://github.com/bluegreen-labs/phenocam-installation-tool.git
@@ -80,9 +80,9 @@ alternatively, download the project using download button.
 
 Unzip the downloaded files or use the files cloned by git as is.
 
-### ICOS network
+### ICOS PhenoCam network
 
-clone the project to your home computer using the following command (with git installed)
+For all the cameras associated with the ICOS Europe PhenoCam network, clone the project (branch) to your home computer using the following command (with git installed)
 
 ```bash
 git clone https://github.com/bluegreen-labs/phenocam-installation-tool.git -b icos
