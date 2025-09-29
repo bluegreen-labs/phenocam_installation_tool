@@ -1,6 +1,6 @@
 # PhenoCam Installation Tool (PIT)
 
-> [!warning]
+> [!note]
 > The software below only covers the old Stardot Netcam SC5, for the new Stardot Netcam Live2 (i.e. most cameras bought after 2021) you will need the new version (v2) of the Phenocam Installation Tool software, which can be found at:
 > https://github.com/bluegreen-labs/phenocam_installation_tool_v2 .
 
