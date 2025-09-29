@@ -1,7 +1,7 @@
 # PhenoCam Installation Tool (PIT)
 
 > [!warning]
-> The software below only covers the old Stardot Netcam SC5, for the new Stardot Netcam Live2 (i.e. most cameras bought after 2021) you will need the PIT2 software which can be found at:
+> The software below only covers the old Stardot Netcam SC5, for the new Stardot Netcam Live2 (i.e. most cameras bought after 2021) you will need the new version (v2) of the Phenocam Installation Tool software, which can be found at:
 > https://github.com/bluegreen-labs/phenocam_installation_tool_v2 .
 
 PhenoCam Installation Tool (PIT) is a set of scripts for Linux/Mac OSX and Windows taking care of the settings as needed by cameras installed by or associated with the [PhenoCam network](http://phenocam.nau.edu).
