@@ -120,7 +120,9 @@ USER='anonymous'
 PASSWD='anonymous'
 
 # create default server list
-echo $HOST > server.txt
+# modified line for new server.txt format EWK
+#echo $HOST > server.txt
+echo -e "$USER:$PASSWD@$HOST/data\\/$NEW_CAMERA_NAME" > server.txt
 
 # make sure we are in the config directory
 # before proceeding
@@ -254,9 +256,13 @@ fi
 # set proper camera names in all config files
 # and upload scripts
 cat default_overlay0.conf	| sed "s/mycamera/$NEW_CAMERA_NAME/g" | sed "s/netcammodel/$MODELNAME/g" | sed "s/LOCAL/$LOCALTZ/g" > current_overlay0.conf
-cat default_ftp.scr 		| sed "s/mycamera/$NEW_CAMERA_NAME/g" | sed "s/FTPMODE/$FTPMODE/g" | sed "s/PASSWORD/$PASSWD/g" | sed "s/USER/$USER/g" > ftp.scr
-cat default_IR_ftp.scr 		| sed "s/mycamera/$NEW_CAMERA_NAME/g" | sed "s/FTPMODE/$FTPMODE/g" | sed "s/PASSWORD/$PASSWD/g" | sed "s/USER/$USER/g" > IR_ftp.scr
-cat default_IP_ftp.scr 		| sed "s/mycamera/$NEW_CAMERA_NAME/g" | sed "s/FTPMODE/$FTPMODE/g" | sed "s/PASSWORD/$PASSWD/g" | sed "s/USER/$USER/g" > IP_ftp.scr
+#cat default_ftp.scr 		| sed "s/mycamera/$NEW_CAMERA_NAME/g" | sed "s/FTPMODE/$FTPMODE/g" | sed "s/PASSWORD/$PASSWD/g" | sed "s/USER/$USER/g" > ftp.scr
+#cat default_IR_ftp.scr 	| sed "s/mycamera/$NEW_CAMERA_NAME/g" | sed "s/FTPMODE/$FTPMODE/g" | sed "s/PASSWORD/$PASSWD/g" | sed "s/USER/$USER/g" > IR_ftp.scr
+#cat default_IP_ftp.scr 	| sed "s/mycamera/$NEW_CAMERA_NAME/g" | sed "s/FTPMODE/$FTPMODE/g" | sed "s/PASSWORD/$PASSWD/g" | sed "s/USER/$USER/g" > IP_ftp.scr
+cat default_ftp.scr 		| sed 's@data/mycamera@DATAPTH@' | sed "s/mycamera/$NEW_CAMERA_NAME/g" | sed "s/FTPMODE/$FTPMODE/g" | sed "s/PASSWORD/PASWRD/g" | sed "s/USER/USERNAME/g" > ftp.scr
+cat default_IR_ftp.scr 		| sed 's@data/mycamera@DATAPTH@' | sed "s/mycamera/$NEW_CAMERA_NAME/g" | sed "s/FTPMODE/$FTPMODE/g" | sed "s/PASSWORD/PASWRD/g" | sed "s/USER/USERNAME/g" > IR_ftp.scr
+cat default_IP_ftp.scr 		| sed 's@data/mycamera@DATAPTH@' | sed "s/mycamera/$NEW_CAMERA_NAME/g" | sed "s/FTPMODE/$FTPMODE/g" | sed "s/PASSWORD/PASWRD/g" | sed "s/USER/USERNAME/g" > IP_ftp.scr
+
 
 # rewrite everything into new files, just to be sure
 cat default_video0.conf > video0.conf

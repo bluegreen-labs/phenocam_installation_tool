@@ -22,8 +22,22 @@ cat site_ip.html | sed "s/DATETIME/$DATETIME/g" | sed "s/SITEIP/$IP/g" > $SITENA
 # and for all servers
 for i in `seq 1 $nrservers` ;
 do
-	SERVER=`awk -v p=$i 'NR==p' server.txt` 
-	cat IP_ftp.scr | sed "s/DATETIMESTRING/$DATETIMESTRING/g" | sed "s/SERVER/$SERVER/g" > IP_ftp_tmp.scr
+	#Changes here for ftp paths EWK
+	#SERVER=`awk -v p=$i 'NR==p' server.txt` 
+	#cat IP_ftp.scr | sed "s/DATETIMESTRING/$DATETIMESTRING/g" | sed "s/SERVER/$SERVER/g" > IP_ftp_tmp.scr
+		USERNAME=`awk -v p=$i 'NR==p' server.txt | awk 'BEGIN {FS= "[:@/]";} {print$1}'`
+		PASWRD=`awk -v p=$i 'NR==p' server.txt | awk 'BEGIN {FS= "[:@/]";} {print$2}'`
+		SERVER=`awk -v p=$i 'NR==p' server.txt | awk 'BEGIN {FS= "[:@/]";} {print$3}'`
+		DATAPTH=`awk -v p=$i 'NR==p' server.txt | awk -F: 'BEGIN {FS= "[:@/]";} { st = index($0,"/");print substr($0,st+1)}'`
+
+		echo $USERNAME
+		echo $PASWRD
+		echo $SERVER
+		echo $DATAPTH
+
+		cat IP_ftp.scr | sed "s/DATETIMESTRING/$DATETIMESTRING/g" | sed "s/SERVER/$SERVER/g" | sed "s/USERNAME/$USERNAME/g" | sed "s/PASWRD/$PASWRD/g" | sed "s/DATAPTH/$DATAPTH/g" > IP_ftp_tmp.scr
+ 		#end edits EWK
+	
 	ftpscript IP_ftp_tmp.scr >> /dev/null
 done
 

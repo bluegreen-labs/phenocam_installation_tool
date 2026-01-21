@@ -130,9 +130,23 @@ if [ "$IR" = "1" ]; then
 
 	for i in `seq 1 $nrservers` ;
 	do
-		SERVER=`awk -v p=$i 'NR==p' server.txt` 
-		cat ftp.scr | sed "s/DATETIMESTRING/$DATETIMESTRING/g" | sed "s/SERVER/$SERVER/g" > ftp_tmp.scr
- 		ftpscript ftp_tmp.scr >> $LOG
+		#changed following lines for different RGB ftp paths EWK
+		#SERVER=`awk -v p=$i 'NR==p' server.txt` 
+		#cat ftp.scr | sed "s/DATETIMESTRING/$DATETIMESTRING/g" | sed "s/SERVER/$SERVER/g" > ftp_tmp.scr
+		USERNAME=`awk -v p=$i 'NR==p' server.txt | awk 'BEGIN {FS= "[:@/]";} {print$1}'`
+		PASWRD=`awk -v p=$i 'NR==p' server.txt | awk 'BEGIN {FS= "[:@/]";} {print$2}'`
+		SERVER=`awk -v p=$i 'NR==p' server.txt | awk 'BEGIN {FS= "[:@/]";} {print$3}'`
+		DATAPTH=`awk -v p=$i 'NR==p' server.txt | awk -F: 'BEGIN {FS= "[:@/]";} { st = index($0,"/");print substr($0,st+1)}'`
+
+		echo $USERNAME
+		echo $PASWRD
+		echo $SERVER
+		echo $DATAPTH
+
+		cat ftp.scr | sed "s/DATETIMESTRING/$DATETIMESTRING/g" | sed "s/SERVER/$SERVER/g" | sed "s/USERNAME/$USERNAME/g" | sed "s/PASWRD/$PASWRD/g" | sed "s/DATAPTH/$DATAPTH/g" > ftp_tmp.scr
+ 		#end edits EWK
+		
+		ftpscript ftp_tmp.scr >> $LOG
 	done
 	
 	rm /etc/config/metadata.txt
@@ -167,8 +181,21 @@ if [ "$IR" = "1" ]; then
 	# run the upload script With IR enabled for all servers
 	for i in `seq 1 $nrservers` ;
 	do
-		SERVER=`awk -v p=$i 'NR==p' server.txt` 
-		cat IR_ftp.scr | sed "s/DATETIMESTRING/$DATETIMESTRING/g" | sed "s/SERVER/$SERVER/g" > IR_ftp_tmp.scr
+		#changed following lines for different IR ftp paths EWK
+		#SERVER=`awk -v p=$i 'NR==p' server.txt` 
+		#cat IR_ftp.scr | sed "s/DATETIMESTRING/$DATETIMESTRING/g" | sed "s/SERVER/$SERVER/g" > IR_ftp_tmp.scr
+		USERNAME=`awk -v p=$i 'NR==p' server.txt | awk 'BEGIN {FS= "[:@/]";} {print$1}'`
+		PASWRD=`awk -v p=$i 'NR==p' server.txt | awk 'BEGIN {FS= "[:@/]";} {print$2}'`
+		SERVER=`awk -v p=$i 'NR==p' server.txt | awk 'BEGIN {FS= "[:@/]";} {print$3}'`
+		DATAPTH=`awk -v p=$i 'NR==p' server.txt | awk -F: 'BEGIN {FS= "[:@/]";} { st = index($0,"/");print substr($0,st+1)}'`
+
+		echo $USERNAME
+		echo $PASWRD
+		echo $SERVER
+		echo $DATAPTH
+
+		cat IR_ftp.scr | sed "s/DATETIMESTRING/$DATETIMESTRING/g" | sed "s/SERVER/$SERVER/g" | sed "s/USERNAME/$USERNAME/g" | sed "s/PASWRD/$PASWRD/g" | sed "s/DATAPTH/$DATAPTH/g" > IR_ftp_tmp.scr
+ 		#end edits EWK
  		ftpscript IR_ftp_tmp.scr >> $LOG
 	done
 	
@@ -211,8 +238,21 @@ else
 	# cycle over all servers and upload the data
 	for i in `seq 1 $nrservers` ;
 	do
-		SERVER=`awk -v p=$i 'NR==p' server.txt` 
-		cat ftp.scr | sed "s/DATETIMESTRING/$DATETIMESTRING/g" | sed "s/SERVER/$SERVER/g" > ftp_tmp.scr
+		#changed following lines for different RGB ftp paths EWK
+		#SERVER=`awk -v p=$i 'NR==p' server.txt` 
+		#cat ftp.scr | sed "s/DATETIMESTRING/$DATETIMESTRING/g" | sed "s/SERVER/$SERVER/g" > ftp_tmp.scr
+		USERNAME=`awk -v p=$i 'NR==p' server.txt | awk 'BEGIN {FS= "[:@/]";} {print$1}'`
+		PASWRD=`awk -v p=$i 'NR==p' server.txt | awk 'BEGIN {FS= "[:@/]";} {print$2}'`
+		SERVER=`awk -v p=$i 'NR==p' server.txt | awk 'BEGIN {FS= "[:@/]";} {print$3}'`
+		DATAPTH=`awk -v p=$i 'NR==p' server.txt | awk -F: 'BEGIN {FS= "[:@/]";} { st = index($0,"/");print substr($0,st+1)}'`
+
+		echo $USERNAME
+		echo $PASWRD
+		echo $SERVER
+		echo $DATAPTH
+
+		cat ftp.scr | sed "s/DATETIMESTRING/$DATETIMESTRING/g" | sed "s/SERVER/$SERVER/g" | sed "s/USERNAME/$USERNAME/g" | sed "s/PASWRD/$PASWRD/g" | sed "s/DATAPTH/$DATAPTH/g" > ftp_tmp.scr
+ 		#end edits EWK
  		ftpscript ftp_tmp.scr >> $LOG
 	done
 
